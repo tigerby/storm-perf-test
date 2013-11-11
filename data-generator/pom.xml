@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.tigerby</groupId>
+        <artifactId>perftest</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+
+    <artifactId>perftest.data-generator</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+        <output.encoding>UTF-8</output.encoding>
+    </properties>
+
+    <build>
+        <finalName>data-generator</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>
+                                com.tigerby.storm.perftest.Runner
+                            </mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.tigerby</groupId>
+            <artifactId>perftest.avro</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>args4j</groupId>
+            <artifactId>args4j</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>clojars.org</id>
+            <url>http://clojars.org/repo</url>
+        </repository>
+    </repositories>
+
+    <!-- Organization Information -->
+    <organization>
+        <name>kth</name>
+        <url>http://www.kthcorp.com</url>
+    </organization>
+
+    <!-- Developer Information -->
+    <developers>
+        <developer>
+            <id>tigerby</id>
+            <name>Bongyeon Kim</name>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <email>bongyeon.kim@gmail.com</email>
+        </developer>
+    </developers>
+
+
+</project>

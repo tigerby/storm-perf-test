@@ -1,0 +1,10 @@
+@namespace("com.tigerby.storm.perftest.generated")
+protocol DataProtocol {
+
+    enum Status {
+        SUCCESS, FAIL, UNKNOWN
+    }
+
+    Status execute(string data);
+
+}
