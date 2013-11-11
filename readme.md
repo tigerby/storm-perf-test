@@ -1,4 +1,6 @@
-Storm Performance Test
+## Storm Performance Test
+
+### How to 
 
 This test consist of two part: data-generator and storm.
 
@@ -10,13 +12,15 @@ data-generator is using in this test, also you can use another transpering proto
 
 first, run storm on local or cluster like below.
 
+<pre><code>
 storm jar storm-perf-test-jar-with-dependencies.jar com.tigerby.storm.perftest.PerfTopology -p 10002 --messageSize 500 --pollFreq 20
-
-
+</code></pre>
 
 and, run data generator like below.
-
+<pre><code>
 java -jar data-generator-jar-with-dependencies.jar -h daisy08 -p 10002 -r 2000 --threadNum 10
+</code></pre>
+
 
 In cluster mode, notice that you should check where Storm's spout is running in the cluster and parameter it when you running data-generator.
 
@@ -25,7 +29,7 @@ In my case, it processed 5 MB/sec averagely.
 My result in detail is like that:
 
 data-generator:
-
+<pre><code>
 [5] Sent 6008 in 5002(ms) avg ns/msg 1201120(ns) avg 1201(msg/s) sleep 0(ms)
 [7] Sent 5988 in 5001(ms) avg ns/msg 1197361(ns) avg 1197(msg/s) sleep 0(ms)
 [1] Sent 5932 in 5001(ms) avg ns/msg 1186163(ns) avg 1186(msg/s) sleep 0(ms)
@@ -36,11 +40,11 @@ data-generator:
 [9] Sent 6163 in 5001(ms) avg ns/msg 1232354(ns) avg 1232(msg/s) sleep 0(ms)
 [3] Sent 6129 in 5001(ms) avg ns/msg 1225555(ns) avg 1225(msg/s) sleep 0(ms)
 [10] Sent 6216 in 5001(ms) avg ns/msg 1242951(ns) avg 1243(msg/s) sleep 0(ms)
-
+</code></pre>
 
 
 Storm:
-
+<pre><code>
 status	topologies	totalSlots	slotsUsed	totalExecutors	executorsWithMetrics	time	time-diff(ms)	transferred	throughput(MB/s)	reachToEnd	reachThroughput(MB/s)	reachThroughput(msg/s)	reachLatency(ns/msg)
 WAITING	1	4	0	5	0	1384148343947	0	0	0.0	0	0.0	0	0
 WAITING	1	4	2	5	5	1384148363951	20004	283320	6.753524478209826	141660	3.376762239104913	7083	141211
@@ -60,5 +64,7 @@ RUNNING	1	4	2	5	5	1384148623952	20002	457040	10.89559317993982	228160	5.43921437
 RUNNING	1	4	2	5	5	1384148643946	19994	248700	5.9312494370869855	143560	3.4237642508572885	7555	139272
 RUNNING	1	4	2	5	5	1384148663951	20005	416100	9.918117547029258	188840	4.501171154965165	9442	105936
 RUNNING	1	4	2	5	5	1384148683948	19997	352500	8.405515740691182	175820	4.192504333413684	9253	113735
+</code></pre>
 
-References
+### References
+https://github.com/yahoo/storm-perf-test
