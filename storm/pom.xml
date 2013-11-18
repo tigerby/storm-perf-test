@@ -104,6 +104,13 @@
             <groupId>args4j</groupId>
             <artifactId>args4j</artifactId>
         </dependency>
+
+        <!--kafka spout-->
+        <dependency>
+            <groupId>com.tigerby</groupId>
+            <artifactId>storm-kafka</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <repositories>
