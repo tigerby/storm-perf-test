@@ -1,4 +1,4 @@
-package com.tigerby.storm.perftest;
+package com.tigerby.storm.perftest.receiver;
 
 import com.tigerby.storm.perftest.generated.DataProtocol;
 import com.tigerby.storm.perftest.generated.Status;

@@ -1,5 +1,6 @@
-package com.tigerby.storm.perftest.Sender;
+package com.tigerby.storm.perftest.avro;
 
+import com.tigerby.storm.perftest.commons.Sender;
 import com.tigerby.storm.perftest.generated.DataProtocol;
 
 import org.apache.avro.ipc.NettyTransceiver;

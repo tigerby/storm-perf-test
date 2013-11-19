@@ -1,4 +1,4 @@
-package com.tigerby.storm.perftest.Sender;
+package com.tigerby.storm.perftest.commons;
 
 /**
  * Created with IntelliJ IDEA.
