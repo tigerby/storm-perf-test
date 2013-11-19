@@ -1,5 +1,6 @@
-package com.tigerby.storm.perftest;
+package com.tigerby.storm.perftest.avro;
 
+import com.tigerby.storm.perftest.metric.Cluster;
 import com.tigerby.storm.perftest.metric.Metrics;
 
 import org.apache.thrift7.TException;
@@ -35,7 +36,7 @@ public class PerfTopology {
   }
 
   private void start(String[] args) throws AlreadyAliveException, InvalidTopologyException {
-    Args arg = Args.getValidatedArgs(args);
+    AvroArgs arg = AvroArgs.getValidatedArgs(args);
 
     TopologyBuilder builder = new TopologyBuilder();
 

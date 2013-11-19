@@ -1,4 +1,4 @@
-package com.tigerby.storm.perftest;
+package com.tigerby.storm.perftest.metric;
 
 import backtype.storm.generated.ClusterSummary;
 import backtype.storm.generated.TopologyInfo;

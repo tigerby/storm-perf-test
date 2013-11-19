@@ -18,7 +18,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
         <output.encoding>UTF-8</output.encoding>
-        <storm.version>0.8.2</storm.version>
+        <storm.version>0.9.0-rc2</storm.version>
     </properties>
 
     <build>
@@ -33,7 +33,7 @@
                     <archive>
                         <manifest>
                             <mainClass>
-                                com.tigerby.storm.perftest.PerfTopology
+                                com.tigerby.storm.perftest.avro.PerfTopology
                             </mainClass>
                         </manifest>
                     </archive>
@@ -107,9 +107,9 @@
 
         <!--kafka spout-->
         <dependency>
-            <groupId>com.tigerby</groupId>
+            <groupId>storm</groupId>
             <artifactId>storm-kafka</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
+            <version>0.9.0-rc2</version>
         </dependency>
     </dependencies>
 

@@ -1,7 +1,5 @@
 package com.tigerby.storm.perftest.metric;
 
-import com.tigerby.storm.perftest.Cluster;
-
 import java.util.Map;
 
 import backtype.storm.generated.ClusterSummary;

@@ -1,4 +1,4 @@
-package com.tigerby.storm.perftest;
+package com.tigerby.storm.perftest.avro;
 
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
@@ -10,7 +10,7 @@ import org.kohsuke.args4j.Option;
  * @author <a href="mailto:bongyeonkim@gmail.com">Kim Bongyeon</a>
  * @version 1.0
  */
-public class Args {
+public class AvroArgs {
 
   @Option(name = "--help", usage = "show help.")
   public boolean help_;
@@ -49,8 +49,8 @@ public class Args {
           usage = "How long should the perftest run for.")
   public int testRunTimeSec_ = 5 * 60;
 
-  public static Args getValidatedArgs(String[] args) {
-    Args arg = new Args();
+  public static AvroArgs getValidatedArgs(String[] args) {
+    AvroArgs arg = new AvroArgs();
 
     CmdLineParser cmdLineParser = new CmdLineParser(arg);
     cmdLineParser.setUsageWidth(80);

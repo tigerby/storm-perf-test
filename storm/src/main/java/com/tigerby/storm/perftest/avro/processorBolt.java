@@ -1,4 +1,4 @@
-package com.tigerby.storm.perftest;
+package com.tigerby.storm.perftest.avro;
 
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;

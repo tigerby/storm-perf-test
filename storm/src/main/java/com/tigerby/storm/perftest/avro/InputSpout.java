@@ -1,4 +1,4 @@
-package com.tigerby.storm.perftest;
+package com.tigerby.storm.perftest.avro;
 
 
 import com.tigerby.storm.perftest.generated.DataProtocol;
