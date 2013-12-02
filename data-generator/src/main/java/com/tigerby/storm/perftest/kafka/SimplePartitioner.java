@@ -17,12 +17,13 @@ public class SimplePartitioner implements Partitioner<String> {
 
   @Override
   public int partition(String key, int a_numPartitions) {
-    int partition = 0;
-    int offset = key.lastIndexOf('.');
-    if (offset > 0) {
-      partition = Integer.parseInt( key.substring(offset+1)) % a_numPartitions;
-    }
-    return partition;
+//    int partition = 0;
+//    int offset = key.lastIndexOf('.');
+//    if (offset > 0) {
+//      partition = Integer.parseInt( key.substring(offset+1)) % a_numPartitions;
+//    }
+//    return partition;
+    return (int) Long.parseLong(key) % a_numPartitions;
   }
 
 }

@@ -15,7 +15,7 @@ public class KafkaRunnerArgs {
   public boolean help_ = false;
 
   @Option(name = "--brokers_", aliases = "-b", usage = "broker list")
-  public String brokers_ = "daisy06:9092,daisy07:9092,daisy08:9092";
+  public String brokers_ = "daisy11:9091,daisy11:9092,daisy12:9093,daisy12:9094";
 
   @Option(name = "--rate", aliases = "-r", usage = "message generating rate.")
   public int rate_ = 1000;

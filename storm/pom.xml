@@ -72,7 +72,7 @@
             <groupId>storm</groupId>
             <artifactId>storm</artifactId>
             <version>${storm.version}</version>
-            <!--<scope>provided</scope>-->
+            <scope>provided</scope>
         </dependency>
 
         <dependency>

@@ -34,7 +34,8 @@
                     <archive>
                         <manifest>
                             <mainClass>
-                                com.tigerby.storm.perftest.AvroRunner
+                                com.tigerby.storm.perftest.KafkaProducerRunner
+
                             </mainClass>
                         </manifest>
                     </archive>
@@ -118,12 +119,12 @@
 
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>clojars.org</id>
-            <url>http://clojars.org/repo</url>
-        </repository>
-    </repositories>
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<id>clojars.org</id>-->
+            <!--<url>http://clojars.org/repo</url>-->
+        <!--</repository>-->
+    <!--</repositories>-->
 
     <!-- Organization Information -->
     <organization>

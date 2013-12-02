@@ -19,6 +19,7 @@ import kafka.producer.ProducerConfig;
 public class KafkaProducer implements Sender {
   private Producer<String, String> producer;
   private Random rnd = new Random();
+  private long id;
 
   public static KafkaProducer newInstance() {
     Properties props = new Properties();
@@ -43,8 +44,9 @@ public class KafkaProducer implements Sender {
     long runtime = new Date().getTime();
     String ip = "192.168.2." + rnd.nextInt(255);
     String msg = runtime + ",www.example.com," + ip;
-    KeyedMessage<String, String> data = new KeyedMessage<String, String>("page_visits", ip, msg);
+    String key = String.valueOf(++id);
+    KeyedMessage<String, String> data = new KeyedMessage<String, String>("ips", key, key + "," + msg);
     producer.send(data);
-    System.out.printf("sent %s to %s\n", data.toString(), "brokers_.");
+//    System.out.printf("sent %s to %s\n", data.toString(), "brokers_.");
   }
 }
